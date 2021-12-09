@@ -13,6 +13,18 @@ Development
 Build
 -----
 
+- `Upgrade toolchain <https://stackoverflow.com/questions/69848319/unable-to-specify-edition2021-in-order-to-use-unstable-packages-in-rust>`__ if necessary:
+
+::
+
+    $ rustup default nightly && rustup update
+
+- Useful `magic <https://github.com/rust-lang/rust/issues/91702>`__
+
+::
+
+    $ cargo clean
+
 ::
 
     $ cargo build --release
