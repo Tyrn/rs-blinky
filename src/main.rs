@@ -50,8 +50,8 @@ fn main() -> ! {
     // Now, enjoy the lightshow!
     loop {
         led.set_high().ok();
-        delay.delay_ms(1_000_u16);
+        delay.delay_ms(1_00_u16);
         led.set_low().ok();
-        delay.delay_ms(1_000_u16);
+        delay.delay_ms(2_00_u16);
     }
 }
