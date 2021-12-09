@@ -50,4 +50,8 @@ Install
 
 ::
 
+    $ cargo install cargo-flash
+
+::
+
     $ cargo flash --chip stm32f103C8 --release
