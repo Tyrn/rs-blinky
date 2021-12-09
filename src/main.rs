@@ -51,27 +51,27 @@ fn main() -> ! {
 
     // Now, enjoy the lightshow!
     loop {
-        led.set_high().ok();
-        delay.delay_ms(DOT_DELAY);
         led.set_low().ok();
+        delay.delay_ms(DOT_DELAY);
+        led.set_high().ok();
 
         delay.delay_ms(DOT_DELAY);
 
-        led.set_high().ok();
+        led.set_low().ok();
         delay.delay_ms(DASH_DELAY);
-        led.set_low().ok();
-
-        delay.delay_ms(DOT_DELAY);
-
         led.set_high().ok();
+
         delay.delay_ms(DOT_DELAY);
+
         led.set_low().ok();
-
         delay.delay_ms(DOT_DELAY);
-
         led.set_high().ok();
+
         delay.delay_ms(DOT_DELAY);
+
         led.set_low().ok();
+        delay.delay_ms(DOT_DELAY);
+        led.set_high().ok();
 
         delay.delay_ms(DASH_DELAY * 2);
     }
