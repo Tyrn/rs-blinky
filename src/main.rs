@@ -47,13 +47,32 @@ fn main() -> ! {
     let mut delay = Delay::new(cp.SYST, clocks);
 
     const DOT_DELAY: u16 = 1_00_u16;
-    const DASH_DELAY: u16 = 1_00_u16;
+    const DASH_DELAY: u16 = 3_00_u16;
 
     // Now, enjoy the lightshow!
     loop {
         led.set_high().ok();
         delay.delay_ms(DOT_DELAY);
         led.set_low().ok();
+
+        delay.delay_ms(DOT_DELAY);
+
+        led.set_high().ok();
         delay.delay_ms(DASH_DELAY);
+        led.set_low().ok();
+
+        delay.delay_ms(DOT_DELAY);
+
+        led.set_high().ok();
+        delay.delay_ms(DOT_DELAY);
+        led.set_low().ok();
+
+        delay.delay_ms(DOT_DELAY);
+
+        led.set_high().ok();
+        delay.delay_ms(DOT_DELAY);
+        led.set_low().ok();
+
+        delay.delay_ms(DASH_DELAY * 2);
     }
 }
