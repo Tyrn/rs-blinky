@@ -19,6 +19,27 @@ Build
 
     $ rustup default nightly && rustup update
 
+- Extend the toolchain, if necessary:
+
+::
+
+    $ rustup component add rustfmt
+    $ cargo install cargo-generate
+    $ cargo install cargo-binutils
+    $ rustup component add llvm-tools-preview
+
+- Check available targets:
+
+::
+
+    $ rustup target list
+
+- Add a target, if necessary:
+
+::
+
+    $ rustup target add thumbv7m-none-eabi
+
 - Useful `magic <https://github.com/rust-lang/rust/issues/91702>`__
 
 ::
@@ -28,6 +49,19 @@ Build
 ::
 
     $ cargo build --release
+
+- Check:
+
+::
+
+    $ cargo readobj --bin <name> -- --file-headers
+    $ cargo size --bin <name> --release -- -A
+
+- Disassemble:
+
+::
+
+    $ cargo objdump --bin app --release -- --disassemble --no-show-raw-insn --print-imm-hex
 
 Format
 ------
