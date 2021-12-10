@@ -85,6 +85,7 @@ Install
 ::
 
     $ cargo install cargo-flash
+    $ cargo flash --list-chips
 
 ::
 
