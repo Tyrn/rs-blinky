@@ -9,6 +9,7 @@ Development
 ===========
 
 - `Format Rust code <https://github.com/rust-lang/rustfmt>`__
+- Issue loading binary onto stm32f3discovery `#43 <https://github.com/rust-embedded/book/issues/43>`__
 
 Build
 -----
